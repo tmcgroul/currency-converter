@@ -1,10 +1,10 @@
 import React from 'react';
 import { PAGE_CHANGED } from '../actions/NavBarActions';
-import CollectionContainer from '../containers/CollectionContainer';
+import CollectionPageContainer from '../containers/CollectionPageContainer';
 
 
 const initialState = {
-    activePage: CollectionContainer,
+    activePage: CollectionPageContainer,
 };
 
 export function navigateReducer(state=initialState, action) {

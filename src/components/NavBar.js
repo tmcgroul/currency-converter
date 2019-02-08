@@ -1,11 +1,11 @@
 import React from 'react';
 
-import CollectionContainer from '../containers/CollectionContainer';
-import ConverterContainer from '../containers/ConverterContainer';
+import CollectionPageContainer from '../containers/CollectionPageContainer';
+import ConverterPageContainer from '../containers/ConverterPageContainer';
 
 const COMPONENTS = {
-    CollectionContainer: 'currency',
-    ConverterContainer: 'converter',
+    [CollectionPageContainer]: 'currency',
+    [ConverterPageContainer]: 'converter',
 };
 
 export class NavBar extends React.Component {
@@ -36,9 +36,9 @@ export class NavBar extends React.Component {
         this._deactivateLastTab();
 
         if (e.currentTarget.id == 'converter') {
-            this.props.switchPage(ConverterContainer);
+            this.props.switchPage(ConverterPageContainer);
         } else {
-            this.props.switchPage(CollectionContainer);
+            this.props.switchPage(CollectionPageContainer);
         }
     }
 
@@ -50,7 +50,7 @@ export class NavBar extends React.Component {
     }
 
     _manageActive = () => {
-        const id = COMPONENTS[this.props.activePage.name];
+        const id = COMPONENTS[this.props.activePage];
         const elem = document.getElementById(id);
         elem.className += ' active';
     }

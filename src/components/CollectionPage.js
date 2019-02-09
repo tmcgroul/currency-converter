@@ -82,11 +82,11 @@ export class CollectionPage extends React.Component {
     _sortCurrency = () => {
         const byName = this.props.currencies.sort((previous, current) => {
             if (previous.Name > current.Name) {
-                return 1;
+                return -1;
             }
             
             if (previous.Name < current.Name) {
-                return -1;
+                return 1;
             }
 
             return 0;

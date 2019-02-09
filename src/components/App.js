@@ -6,11 +6,10 @@ import NavBarContainer from '../containers/NavBarContainer';
 export class App extends React.Component {
     render() {
         const page = this.props.navigate.activePage;
-
         return (
             <React.Fragment>
                 <NavBarContainer />
-                {React.createElement(page)}
+                {React.createElement(page, { currencies: this.props.collection.currencies })}
             </React.Fragment>
         );
     }

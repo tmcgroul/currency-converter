@@ -1,6 +1,38 @@
 #root {
     margin: 0 .5rem 0;
 
+    .converter-page {
+        display: grid;
+        align-items: center;
+        grid-gap: 1rem;
+        grid-template-columns: 15rem 15rem;
+        grid-template-areas:
+            "first-input first-selectize"
+            "second-input second-selectize";
+
+        .currency-selector {
+            padding-bottom: 0.5rem;
+
+            &.first {
+                grid-area: first-selectize;
+            }
+
+            &.second {
+                grid-area: second-selectize;
+            }
+        }
+
+        .form-control {
+            &.first {
+                grid-area: first-input;
+            }
+
+            &.second {
+                grid-area: second-input;
+            }
+        }
+    }
+
     .collection-page {
         display: grid;
         grid-template-columns: repeat(5, 1fr);

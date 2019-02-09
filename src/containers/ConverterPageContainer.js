@@ -5,7 +5,7 @@ import ConverterPage from '../components/ConverterPage';
 export default class ConverterPageContainer extends React.Component {
     render() {
         return (
-            <ConverterPage />
+            <ConverterPage currencies={this.props.currencies} />
         );
     }
 }

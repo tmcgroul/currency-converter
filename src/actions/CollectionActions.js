@@ -17,7 +17,6 @@ export function getCurrency() {
             currencies.forEach(currency => {
                 if (favourites.includes(currency.ID)) {
                     currency.isFavourite = true;
-                    console.log('includes');
                 }
             });
         }
